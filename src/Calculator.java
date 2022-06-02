@@ -30,8 +30,8 @@ public class Calculator {
             try {
                 intA = Integer.parseInt(strA);
                 intB = Integer.parseInt(strB);
-                if (intA <= 0 || intA > 10 || intB <= 0 || intB > 10) {
-                    throw new Exception("Числа должны быть в диапазоне от 0 до 10.");
+                if (intA < 1 || intA > 10 || intB < 1 || intB > 10) {
+                    throw new Exception("Числа должны быть в диапазоне от 1 до 10.");
                 }
                 roman = false;
             } catch (NumberFormatException nfe) {

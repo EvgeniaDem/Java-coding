@@ -4,7 +4,7 @@ public class Main {
 
         String[] inputArray = input.split("\\s+");
         if (inputArray.length > 3) {
-            throw new Exception("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+            throw new Exception("С„РѕСЂРјР°С‚ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРё РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂСЏРµС‚ Р·Р°РґР°РЅРёСЋ - РґРІР° РѕРїРµСЂР°РЅРґР° Рё РѕРґРёРЅ РѕРїРµСЂР°С‚РѕСЂ (+, -, /, *)");
         }
         if (inputArray.length == 3) {
             String strA = inputArray[0];
@@ -15,7 +15,7 @@ public class Main {
             calculator.parse(strA, strB);
             return calculator.calculateToString(sign);
         } else {
-            throw new Exception("строка не является математической операцией");
+            throw new Exception("СЃС‚СЂРѕРєР° РЅРµ СЏРІР»СЏРµС‚СЃСЏ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРµР№");
         }
     }
 }

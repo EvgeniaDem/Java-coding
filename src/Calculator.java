@@ -39,14 +39,14 @@ public class Calculator {
                 intA = Integer.parseInt(strA);
                 intB = Integer.parseInt(strB);
                 if (intA <= 0 || intA > 10 || intB <= 0 || intB > 10) {
-                    throw new Exception("Числа должны быть в диапазоне от 0 до 10.");
+                    throw new Exception("Р§РёСЃР»Р° РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 0 РґРѕ 10.");
                 }
                 roman = false;
             } catch (NumberFormatException nfe) {
-                throw new Exception("На вход передано не целое число");
+                throw new Exception("РќР° РІС…РѕРґ РїРµСЂРµРґР°РЅРѕ РЅРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ");
             }
         } else {
-            throw new Exception("используются одновременно разные системы счисления");
+            throw new Exception("РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ СЂР°Р·РЅС‹Рµ СЃРёСЃС‚РµРјС‹ СЃС‡РёСЃР»РµРЅРёСЏ");
         }
     }
 
@@ -62,13 +62,13 @@ public class Calculator {
 
     private void checkSign(String sign) throws Exception {
         if (!(sign.equals("+") || sign.equals("-") || sign.equals("*") || sign.equals("/"))) {
-            throw new Exception("Неверный тип операции");
+            throw new Exception("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РѕРїРµСЂР°С†РёРё");
         }
     }
 
     private String intToRoman(int value) {
         if (value <= 0) {
-            throw new RuntimeException("в римской системе нет отрицательных чисел/ноля");
+            throw new RuntimeException("РІ СЂРёРјСЃРєРѕР№ СЃРёСЃС‚РµРјРµ РЅРµС‚ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР»/РЅРѕР»СЏ");
         }
         StringBuilder result = new StringBuilder();
         while (value > 0) {

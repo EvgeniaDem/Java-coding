@@ -21,14 +21,6 @@ public class Calculator {
         numberMap.put("X", 10);
     }
 
-    public boolean isRoman(String str) {
-        return numberMap.containsKey(str);
-    }
-
-    public boolean isArabic(String str) {
-        return str.matches("\\d+");
-    }
-
     public void parse(String strA, String strB) throws Exception {
         if (isRoman(strA) && isRoman(strB)) {
             intA = numberMap.get(strA);
@@ -58,6 +50,14 @@ public class Calculator {
         } else {
             return String.valueOf(res);
         }
+    }
+
+    private boolean isRoman(String str) {
+        return numberMap.containsKey(str);
+    }
+
+    private boolean isArabic(String str) {
+        return str.matches("\\d+");
     }
 
     private void checkSign(String sign) throws Exception {
@@ -136,7 +136,7 @@ public class Calculator {
             case "/":
                 return intA / intB;
             default:
-                throw new Exception("Wrong sign.");
+                throw new Exception("неверный оператор.");
         }
     }
 }

@@ -1,5 +1,13 @@
+import java.util.Scanner;
+
 public class Main {
 
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите два числа и знак: ");
+        String result = scanner.nextLine();
+        System.out.println(calc(result));
+    }
     public static String calc(String input) throws Exception {
 
         String[] inputArray = input.split("\\s+");
